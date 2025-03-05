@@ -24,22 +24,33 @@ const FacultyItem = ({ initialFaculty }: Props) => {
     }
   }, [state.faculties, initialFaculty.id])
 
-  console.log({ faculty })
   return (
-
-    <div>
+    <div className="bg-white rounded-lg shadow-md border border-gray-200 p-6 transition-all hover:shadow-lg">
       {openModal && <FacultyModal faculty={faculty} closeModal={() => setOpenModal(false)} />}
-
-      <div className='flex flex-row gap-4'>
-        <button onClick={() => setOpenModal(true)}>Edit</button>
-        <button onClick={() => {
-          router.push("/")
-          deleteFaculty(dispatch, faculty?.id)
-        }}>Delete</button>
-      </div>
       <div>
-        <h1 className="text-3xl font-bold">{faculty?.title}</h1>
-        <p className="mt-4">{faculty?.body}</p>
+        <h2 className="text-2xl font-semibold text-gray-900">
+          {faculty?.title}
+        </h2>
+        <p className="mt-2 text-gray-600">
+          {faculty?.body}
+        </p>
+      </div>
+      <div className="flex items-center gap-3 mt-4">
+        <button
+          onClick={() => setOpenModal(true)}
+          className="px-3 py-1.5 bg-yellow-500 text-white text-sm font-medium rounded-md hover:bg-yellow-600 transition"
+        >
+          Edit
+        </button>
+        <button
+          onClick={() => {
+            router.push("/");
+            deleteFaculty(dispatch, faculty?.id);
+          }}
+          className="px-3 py-1.5 bg-red-500 text-white text-sm font-medium rounded-md hover:bg-red-600 transition"
+        >
+          Delete
+        </button>
       </div>
     </div>
   )

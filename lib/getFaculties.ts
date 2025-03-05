@@ -1,13 +1,18 @@
 import { Faculty } from "./types/faculty"
 
 export async function getFaculties(): Promise<Faculty[]> {
-  const response = await fetch("https://jsonplaceholder.typicode.com/posts", {
-    cache: "no-store",
-  })
+  try {
+    const response = await fetch("https://jsonplaceholder.typicode.com/posts", {
+      cache: "no-store",
+    });
 
-  if (!response.ok) {
-    throw new Error("Failed to fetch faculties")
+    if (!response.ok) {
+      throw new Error("Failed to fetch faculties");
+    }
+
+    return await response.json();
+  } catch (error) {
+    console.error("Error fetching faculties:", error);
+    return [];
   }
-
-  return response.json()
 }
