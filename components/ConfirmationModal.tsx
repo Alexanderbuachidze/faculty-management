@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import Modal from './Modal'
 import { useFaculty } from '@/context/FacultyContext';
-import { Faculty } from '@/lib/types/faculty';
 import { deleteFaculty } from '@/lib/actions';
+import { Faculty } from '@/lib/types/faculty';
 import Button from './Button';
+import Modal from './Modal'
 
 type Props = {
   closeModal: () => void;

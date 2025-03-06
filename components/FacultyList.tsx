@@ -1,9 +1,9 @@
 "use client"
 import React, { useState } from 'react'
-import FacultyModal from './FacultyModal'
-import FacultyItem from './FacultyItem'
 import { useFaculty } from '@/context/FacultyContext'
 import Button from './Button'
+import FacultyItem from './FacultyItem'
+import FacultyModal from './FacultyModal'
 
 
 const FacultyList = () => {

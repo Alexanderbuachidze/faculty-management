@@ -1,5 +1,5 @@
-import { ReactNode } from "react";
 import clsx from "clsx";
+import { ReactNode } from "react";
 
 type ButtonProps = {
   children: ReactNode;
@@ -30,7 +30,7 @@ const Button = ({
       type={type}
       disabled={isLoading || isDisabled}
       className={clsx(
-        "rounded-md transition font-medium focus:outline-none focus:ring-2",
+        "rounded-md transition font-medium focus:outline-none focus:ring-2 cursor-pointer",
         {
           "bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500": variant === "primary",
           "bg-gray-200 text-gray-700 hover:bg-gray-300 focus:ring-gray-400": variant === "secondary",

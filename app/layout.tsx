@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { SWRConfig } from "swr"
 import { FacultyProvider } from "@/context/FacultyContext";
 import { getFaculties } from "@/lib/getFaculties";
-import { SWRConfig } from "swr"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

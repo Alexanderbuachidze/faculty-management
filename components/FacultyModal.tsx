@@ -1,11 +1,11 @@
 "use client"
 
+import { useState } from "react"
 import { useFaculty } from "@/context/FacultyContext";
 import { addFaculty, updateFaculty } from "@/lib/actions";
 import { Faculty } from "@/lib/types/faculty"
-import { useState } from "react"
-import Modal from "./Modal";
 import Button from "./Button";
+import Modal from "./Modal";
 
 type Props = {
   faculty?: Faculty;

@@ -1,10 +1,10 @@
 "use client"
-import { Faculty } from '@/lib/types/faculty'
 import React, { useEffect, useState } from 'react'
-import FacultyModal from './FacultyModal'
 import { useFaculty } from '@/context/FacultyContext'
-import ConfirmationModal from './ConfirmationModal'
+import { Faculty } from '@/lib/types/faculty'
 import Button from './Button'
+import ConfirmationModal from './ConfirmationModal'
+import FacultyModal from './FacultyModal'
 
 type Props = {
   initialFaculty: Faculty;
