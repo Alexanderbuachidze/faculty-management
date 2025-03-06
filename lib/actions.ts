@@ -1,7 +1,7 @@
 import { Action } from "@/context/FacultyContext"
 import { Faculty } from "./types/faculty"
 
-const API_BASE_URL = "https://jsonplaceholder.typicode.com"
+const API_BASE_URL = "https://jsonplaceholder.typicode.com/posts"
 
 export async function addFaculty(dispatch: React.Dispatch<Action>, newFaculty: Faculty) {
   try {

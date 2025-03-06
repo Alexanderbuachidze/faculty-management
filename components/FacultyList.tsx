@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import FacultyModal from './FacultyModal'
 import FacultyItem from './FacultyItem'
 import { useFaculty } from '@/context/FacultyContext'
+import Button from './Button'
 
 
 const FacultyList = () => {
@@ -16,12 +17,9 @@ const FacultyList = () => {
           <h1 className="text-3xl font-semibold text-gray-900">
             Faculty List
           </h1>
-          <button
-            onClick={() => setOpenModal(true)}
-            className="px-4 py-2 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          >
+          <Button variant="primary" onClick={() => setOpenModal(true)}>
             + Add Faculty
-          </button>
+          </Button>
         </div>
         <div className="grid gap-6">
           {faculties.length > 0 ? (
