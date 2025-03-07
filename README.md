@@ -19,6 +19,7 @@ Faculty Management is a Next.js 15 application that allows users to manage a lis
 - **State Management**: React Context API with `useReducer`
 - **Data Fetching**: [SWR](https://swr.vercel.app/) for efficient API requests
 - **Linting & Formatting**: ESLint, TypeScript
+- **Testing**: Jest & React Testing Library with MSW for API mocking
 
 ## Installation
 ### Prerequisites
